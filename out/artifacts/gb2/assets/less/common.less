@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+
+@import "import/mixin";
+@import "import/normalize.less";
+@import "import/modal.less";
+
+h1 {
+  color: @color-main-font;
+  margin: 20px 0 30px 15px;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 0 15px 15px;
+  td {
+    border: 1px solid #333;
+    input[type="text"],
+    input[type="password"]{
+      width: 70%;
+      display: inline-block;
+      box-sizing: border-box;
+      border: 1px solid #333;
+    }
+    button[type="submit"] {
+      cursor: pointer;
+      width: 50px;
+      height: 30px;
+      margin: 10px;
+      background-color: transparent;
+      font-size: 20px;
+      box-sizing: border-box;
+      border: 1px solid #000;
+      display: inline-block;
+    }
+  }
+}
+
+#deleteGuestBook {
+  input[type="password"] {
+    border: 1px solid #333;
+    height: 20px;
+  }
+}

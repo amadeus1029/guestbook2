@@ -1,0 +1,599 @@
+@charset "UTF-8";
+
+
+
+
+//서체
+body {
+    font-family: 'Roboto', 'Noto Sans', sans-serif;
+    font-size: @font-size-base;
+    letter-spacing: -0.04em;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @media @extra-small {
+        font-size: @font-size-small;
+    }
+    font-weight: @font-weight-base;
+    color: #353535;
+}
+
+//텍스트 스타일
+.condensed-text() {
+    letter-spacing: -0.05em;
+}
+
+.single-line-text(@line-height: 100%) {
+    line-height: @line-height;
+}
+//폰트 사이즈
+@font-size-base: 16px;
+@font-size-small: 14px;
+@font-size-extra-small: 12px;
+@font-weight-lighten : 300;
+@font-weight-base: 400; // normal
+@font-weight-bolder: 700; //bold
+
+/*
+//Font-size - all - with media query
+.font-size-40----20()
+.font-size-28----18()
+.font-size-28----14()
+.font-size-26----20()
+.font-size-24-20-20-18()
+.font-size-24----18()
+.font-size-24----16()
+.font-size-22----14()
+.font-size-20----14()
+.font-size-16----14()
+.font-size-22----16()
+.font-size-20----16()
+.font-size-18----16()
+.font-size-18-14-14-14()
+.font-size-18----14()
+.font-size-18----12()
+.font-size-17----12()
+.font-size-16----14()
+.font-size-16----12()
+.font-size-14----12()
+.font-size-12----10()
+
+//그외 단일 폰트 사이즈
+20px
+16px
+14px
+12px
+
+//중복 규격
+h1
+.font-size-28----18()
+.font-size-24----18()
+.font-size-26----20()
+.font-size-h1-h2-user-text-section: 24px;
+
+h2
+.font-size-24-20-20-18()
+.font-size-24----18()
+.font-size-20----16()
+.font-size-18----16()
+.font-size-14----12()
+.font-size-h1-h2-user-text-section: 24px;
+.font-size-invest-amount-h2(): 16px;
+
+h2-small
+.font-size-funding-view-detail-h2-small: 16px;
+.font-size-preContest-h2-small: 14px;
+
+h3
+.font-size-funding-view-detail-questions-h3: 16px;
+.font-size-24----16()
+.font-size-18-14-14-14()
+*/
+
+//elements
+//h1
+.font-size-28----18() {
+  font-size: 28px;
+  line-height: 28px;
+  @media @extra-small {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+//h2
+.font-size-24-20-20-18() {
+  font-size: 24px;
+  @media @medium, @small {
+    font-size: 20px;
+    line-height: 150%;
+  }
+  @media @extra-small {
+    font-size: 18px;
+    line-height: 144.44%;
+  }
+}
+//h2-small
+.font-size-funding-view-detail-h2-small() {
+  font-size: 16px;
+}
+.font-size-preContest-h2-small() {
+  font-size: 14px;
+}
+//h3
+.font-size-18-14-14-14() {
+  font-size: 18px;
+  @media @medium, @small, @extra-small {
+    font-size: 14px;
+    line-height: 164.29%;
+  }
+}
+
+//h4
+.font-size-funding-view-detail-answers-h4() {
+  font-size: 16px;
+}
+
+
+
+//funding-common
+//tags
+.font-size-12----10() {
+  font-size: 12px;
+  @media @extra-small {
+    font-size: 10px;
+  }
+}
+//accessory > copy
+.font-size-accessory() {
+  font-size: 14px;
+	@media @extra-small{
+		font-size:12px;
+	}
+}
+.font-size-category() {
+  font-size: 14px;
+	@media @extra-small{
+		font-size:12px;
+	}
+}
+
+
+
+
+//funding-list-header
+//h1 > contest-name
+.font-size-28----18() {
+  font-size: 28px;
+  line-height: 28px;
+  @media @extra-small {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+//h1 > contest-title
+.font-size-28----14() {
+  font-size: 28px;
+  @media @extra-small {
+    font-size: 14px;
+  }
+}
+//a.details 자세히보기,
+//.state 실시간 현황, 내 모의투자금
+.font-size-16----14() {
+  font-size: 16px;
+  @media @extra-small {
+    font-size: 14px;
+  }
+}
+//div.period
+.font-size-20----14() {
+  font-size: 20px;
+  line-height: 20px;
+  @media @extra-small {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+
+
+
+//funding-list
+//.badge
+.font-size-22----14() {
+  font-size: 22px;
+  @media @extra-small {
+    font-size: 14px;
+  }
+}
+//text-description
+.font-size-16----14() {
+  font-size: 16px;
+  @media @extra-small {
+    font-size: 14px;
+  }
+}
+
+
+
+
+//funding-view-summary
+.font-size-funding-summary-company-name() {
+  font-size: 14px;
+}
+.font-size-funding-summary-amount() {
+  font-size: 14px;
+}
+
+//a, button
+.font-size-22----16() {
+  font-size: 22px;
+  @media @extra-small {
+    font-size: 16px;
+  }
+}
+
+//.status
+.font-size-14----12() {
+  font-size: 14px;
+  @media @extra-small {
+    font-size: 12px;
+  }
+}
+//.currentAmount > .label
+.font-size-18----12() {
+  font-size: 18px;
+  @media @extra-small {
+    font-size: 12px;
+  }
+}
+//.currentAmount > .unit
+.font-size-18----12() {
+  font-size: 18px;
+  @media @extra-small {
+    font-size: 12px;
+  }
+}
+//.currentAmount > strong
+.font-size-22----16() {
+  font-size: 22px;
+  @media @extra-small {
+    font-size: 16px;
+  }
+}
+//.currentPercentage
+.font-size-18----16() {
+  font-size: 18px;
+  @media @extra-small {
+    font-size: 16px;
+  }
+}
+//.endDateTime
+.font-size-16----12() {
+  font-size: 16px;
+  @media @extra-small {
+    font-size: 12px;
+  }
+}
+
+
+
+
+//funding-view-detail
+//menu > .tab > a
+.font-size-16----14() {
+  font-size: 16px;
+  @media @extra-small {
+    font-size: 14px;
+  }
+}
+
+
+//team
+.font-size-funding-view-detail-team-name() {
+  font-size: 20px;
+}
+.font-size-funding-view-detail-team-title() {
+  font-size: 16px;
+}
+.font-size-funding-view-detail-team-career() {
+  font-size: 14px;
+}
+
+
+
+
+//funding
+//h1 펀딩 타이틀
+.font-size-26----20() {
+  font-size: 26px;
+  @media @extra-small {
+    font-size: 20px;
+  }
+}
+//h2 펀딩 소개 소제목
+.font-size-24----18() {
+  font-size: 24px;
+  line-height: 24px;
+  @media @extra-small {
+    font-size: 18px;
+  }
+}
+//펀딩 부제목 - h2의 small 또는 h3이 되어야하지 않는지?
+//.detail.with-toc > .title > .copy
+.font-size-16----14() {
+  font-size: 16px;
+  @media @extra-small {
+    font-size: 14px;
+  }
+}
+
+//h3 펀딩 소개 내 섹션 타이틀
+.font-size-24----16() {
+  font-size: 24px;
+  @media @extra-small {
+    font-size: 16px;
+  }
+}
+
+
+//Q&A
+//questions
+.font-size-funding-view-detail-questions-h3() {
+  font-size: 16px;
+}
+//answers
+.font-size-funding-view-detail-answers-h4() {
+  font-size: 16px;
+}
+
+
+
+
+//invest
+//invest-amount
+//h1
+.font-size-28----18() {
+  font-size: 28px;
+  line-height: 28px;
+  @media @extra-small {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+//h2 - headline
+.font-size-14----12() {
+  font-size: 14px;
+  @media @extra-small {
+    font-size: 12px;
+  }
+}
+//h2 - amount
+.font-size-invest-amount-h2() {
+  font-size: 18px;
+}
+
+//invest-result
+//h1
+.font-size-24----18() {
+  font-size: 24px;
+  line-height: 24px;
+  @media @extra-small {
+    font-size: 18px;
+  }
+}
+//p
+.font-size-18----14() {
+  font-size: 18px;
+  @media @extra-small {
+    font-size: 14px;
+  }
+}
+//.comment > label
+.font-size-18----16() {
+  font-size: 18px;
+  @media @extra-small {
+    font-size: 16px;
+  }
+}
+
+
+//header
+//menu-list
+.font-size-18----14() {
+  font-size: 18px;
+  @media @extra-small {
+    font-size: 14px;
+  }
+}
+//menu-list-children
+.font-size-16----14() {
+  font-size: 16px;
+  @media @extra-small {
+    font-size: 14px;
+  }
+}
+//login-layer
+.font-size-header-login-layer() {
+  font-size: 16px;
+}
+
+
+
+
+//footer
+.font-size-footer() {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+
+
+
+//user
+.user-form-message() {
+  font-size: 14px;
+}
+.font-size-h1-h2-user-text-section() {
+  font-size: 24px;
+}
+
+//agreement > a.tab-menu
+.font-size-20----16() {
+  font-size: 20px;
+  @media @extra-small {
+    font-size: 16px;
+  }
+}
+
+
+
+
+//contest-list
+//funding-result
+.font-size-16----14() {
+  font-size: 16px;
+  @media @extra-small {
+    font-size: 14px;
+  }
+}
+
+
+
+
+//pre-contest
+//h2
+.font-size-18----16() {
+  font-size: 18px;
+  @media @extra-small {
+    font-size: 16px;
+  }
+}
+//h2-small
+.font-size-preContest-h2-small() {
+  font-size: 14px;
+}
+//.overview > dd
+.font-size-40----20() {
+  font-size: 40px;
+  @media @extra-small {
+    font-size: 20px;
+  }
+}
+//.overview > dt
+.font-size-20----14() {
+  font-size: 20px;
+  line-height: 20px;
+  @media @extra-small {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+//.ranking > .company-name
+.font-size-16----14() {
+  font-size: 16px;
+  @media @extra-small {
+    font-size: 14px;
+  }
+}
+//.ranking > li > .funding-title
+.font-size-14----12() {
+  font-size: 14px;
+  @media @extra-small {
+    font-size: 12px;
+  }
+}
+
+
+
+
+//mobile-verification
+//h2
+.font-size-20----16() {
+  font-size: 20px;
+  @media @extra-small {
+    font-size: 16px;
+  }
+}
+//.caution
+.font-size-18----14() {
+  font-size: 18px;
+  @media @extra-small {
+    font-size: 14px;
+  }
+}
+
+
+
+
+//funding-view-summary-other
+//.others > dt
+.font-size-18----14() {
+  font-size: 18px;
+  @media @extra-small {
+    font-size: 14px;
+  }
+}
+//.others > dd
+.font-size-17----12() {
+  font-size: 17px;
+  @media @extra-small {
+    font-size: 12px;
+  }
+}
+
+
+
+
+//form, label, input
+//form.answer
+.font-size-answer-form-label() {
+  font-size: 14px;
+}
+.font-size-answer-input-submit() {
+  font-size: 14px;
+}
+
+
+//invest-amount
+.font-size-invest-amount-input-submit() {
+  font-size: 20px;
+}
+
+
+
+.small-h1-with-small() {
+  font-size: @font-size-base * 1.25;
+  font-weight: @font-weight-base;
+  .condensed-text();
+  @media @small, @medium {
+    font-size: 16px;
+    line-height: 137.5%;
+  }
+  @media @extra-small {
+    font-size: 16px;
+    line-height: 137.5%;
+  }
+  small {
+    font-size: 14px;
+    margin-left: @font-size-base;
+    color: @color-gray-lighten;
+    font-weight: @font-weight-base;
+  }
+}
+
+h2 {
+  .font-size-24----16();
+  .small-h1-with-small();
+  margin: 0;
+  font-weight: @font-weight-bolder;
+  margin-bottom: 8px;
+  small {
+    @media @extra-small {
+      display: none;
+    }
+  }
+}
+
+/* } import/text-guide */

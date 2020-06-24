@@ -1,0 +1,58 @@
+@charset "UTF-8";
+@import "variable.less";
+@import "colorset.less";
+@import "text-guide.less";
+
+/*    Foldable-table Styles    */
+// index
+
+//.table-head(padding-side)
+//.table-head-text(font-size)
+//.table-body(padding-side)
+//.table-head-focused()
+
+
+
+//title-box
+.table-head(@padding-vh, @padding-side) {
+  padding-top: @padding-vh;
+  padding-bottom: @padding-vh;
+  padding-left: @padding-side;
+  padding-right: @padding-side / 2;
+  border-bottom: @border-normal-gray;
+  .with-down-chevron(~"gray", 16px, 97%);
+
+  &:hover {
+    .table-head-focused();
+  }
+
+}
+
+.table-head-focused {
+  background-color: @color-gray-lighten-most !important;
+
+}
+
+//title-box-text
+.table-head-text(@font-size) {
+  overflow: hidden;
+  width: 100%;
+  height: @font-size;
+  .single-line-text();
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.table-body(@padding-side) {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: @padding-side;
+  padding-right: @padding-side / 2;
+  border-bottom: @border-normal-gray;
+  background-color: #ffffff;
+}
+
+.foldable-details {
+  display: none;
+}

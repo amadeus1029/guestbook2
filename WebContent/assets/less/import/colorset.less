@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+/* import/colorset { */
+
+//colorSet - Variable//
+
+
+
+//메인 컬러
+@color-main: #e60073;//rgb(230, 0, 115);
+@color-main-font: #db0f5d;
+@color-main-bg: #f8136a;
+
+
+//서브 컬러
+@color-sub: #6666ff;
+
+@color-sub-darken : #5252cc;
+@color-sub-darken-more: #3d3d99;
+@color-sub-lighten:#b3b2ff;
+@color-sub-lighten-more: #e5e5ff;
+
+
+
+//서브 컬러 그레이
+@color-sub-gray : #8f98b3;
+@color-sub-gray-ex : #9296a0;
+@color-sub-gray-more : #6b7799;
+@color-sub-gray-most : #475066;
+
+//서브 컬러 화이트
+@color-sub-back : #ebedf2;
+@color-sub-back-more: #dadde6;
+@color-sub-back-most: #b8becc;
+@color-sub-back-lighten : #f0f2f7;
+@color-sub-back-lighten-more: #fafafc;
+
+
+
+//그레이스케일
+@color-gray: #292c33;
+@color-gray-sub : #45474d;
+@color-gray-lighten: #8a8f99;
+
+
+@color-gray-lighten-most: #f4f4f4;
+
+
+
+
+//Color - Mixin//
+
+.grayscale() {
+  filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale"); /* Firefox 10+, Firefox on Android */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+}
+
+/* } import/colorset */
+
+
+input::-webkit-input-placeholder { color: #e1e1e1; }

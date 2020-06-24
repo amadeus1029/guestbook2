@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+
+/* import/variable { */
+
+// Media Queries //////////////////////////////////////////////////////////// //
+
+@smallest: ~"only screen and (max-width: 359px)";
+@extra-small: ~"only screen and (max-width: 669px)";
+@small: ~"only screen and (min-width: 670px) and (max-width: 768px)";
+@medium: ~"only screen and (min-width: 769px) and (max-width: 1001px)";
+@large: ~"only screen and (min-width: 1002px)";
+@ipad: ~"only screen and (width: 1024px) and (height: 768px)";
+@ipad-pro: ~"only screen and (min-width: 670px) and (max-width: 1035px)";
+@no-mobile: ~"only screen and (min-width: 680px)";
+//부트스트랩 미디어 쿼리 사이즈 참조 너비
+//@extra-small: ~"only screen and (max-width: 767px)";
+//@small: ~"only screen and (min-width: 768px) and (max-width: 991px)";
+//@medium: ~"only screen and (min-width: 992px) and (max-width: 1136px)";
+//@ipad: ~"only screen and (width: 1024px) and (height: 768px)";
+
+
+//폰트 스타일
+@import "text-guide.less";
+
+//컬러셋
+@import "colorset.less";
+
+
+//보더 스타일
+@border-normal-main: 1px solid @color-main;// #eb1478
+@border-normal-sub: 1px solid #b88869; // #b88869
+@border-normal-gray-lighten: 1px solid #f4f4f4; // #f4f4f4
+@border-normal-gray: 1px solid #e1e1e1; // #e1e1e1
+@border-normal-gray-darken-less: 1px solid #d4d4d4;
+@border-normal-gray-darken: 1px solid #9b9b9b; // #9b9b9b
+@border-normal-gray-lighten-less:1px solid #e4e4e4;//border컬러
+@border-normal-gray-lighten-sub : 1px solid @color-gray-lighten;
+//프로필 이미지 보더 스타일
+@border-profile: 1px solid rgba(0, 0, 0, 0.2);
+
+// 레이아웃
+@layout-max-width-large: 1136px;
+@-header-border-bottom-width: 1px;
+@-header-height: 48px + @-header-border-bottom-width;
+@-ipad-wrapper-padding: 32px;
+@-space-after-header: 16px;
+@-space-before-footer: 16px;
+@-footer-height: 240px;
+
+/* } import/variable */

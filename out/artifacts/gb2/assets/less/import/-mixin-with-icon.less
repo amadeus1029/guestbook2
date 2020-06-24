@@ -1,0 +1,129 @@
+@charset "UTF-8";
+@import "variable.less";
+@import "colorset.less";
+@import "text-guide.less";
+
+/*    withIcon Styles    */
+// index
+
+//.with-left-chevron(chevron-size, padding-left, bg-position)
+//.with-right-chevron(chevron-size, padding-left, bg-position)
+//.with-down-chevron(chevron-size, bg-position)
+//.with-icon(img-url, direction)
+//.with-checkbox-checked/unchecked(box-size, direction)
+
+@chevron-url: "../img/notice/";
+@notice-url: "../img/notice/";
+@deco-url: "../img/deco/";
+@checkbox-url: "../img/buttons/selection/";
+
+.with-left-chevron(@chevron-color, @chevron-size, @padding-left, @bg-position) {
+  padding-left: @padding-left !important;
+
+  background: url("@{chevron-url}chevron-left-@{chevron-color}.svg");
+  background-repeat: no-repeat;
+  background-size: @chevron-size;
+  background-position: @bg-position;
+}
+
+.with-right-chevron(@chevron-color, @chevron-size, @padding-right, @bg-position) {
+  padding-right: @padding-right !important;
+
+  background: url("@{chevron-url}chevron-right-@{chevron-color}.svg");
+  background-repeat: no-repeat;
+  background-size: @chevron-size;
+  background-position: @bg-position;
+}
+
+.with-up-chevron(@chevron-color, @chevron-size, @bg-position) {
+  background: url("@{chevron-url}chevron-up-@{chevron-color}.svg");
+  background-repeat: no-repeat;
+  background-size: @chevron-size;
+  background-position: @bg-position;   
+}
+
+.with-down-chevron(@chevron-color, @chevron-size, @bg-position) {
+  background: url("@{chevron-url}chevron-down-@{chevron-color}.svg");
+  background-repeat: no-repeat;
+  background-size: @chevron-size;
+  background-position: @bg-position;
+}
+
+.with-noticeIconPng(@imgSize, @imgName, @direction) {
+  padding-left: 24px;
+
+  background: url("@{notice-url}@{imgName}.png");
+  background-size: @imgSize;
+  background-position: @direction;
+  background-repeat: no-repeat;  
+}
+
+.with-noticeIcon(@imgSize, @imgName, @direction) {
+  padding-left: 24px;
+
+  background: url("@{notice-url}@{imgName}.svg");
+  background-size: @imgSize;
+  background-position: @direction;
+  background-repeat: no-repeat;
+}
+
+.with-decoIconPng(@imgSize, @imgName, @direction) {
+  padding-left: 24px;
+
+  background: url("@{deco-url}@{imgName}.png");
+  background-size: @imgSize;
+  background-position: @direction;
+  background-repeat: no-repeat;
+}
+.with-decoIcon(@imgSize, @imgName, @direction) {
+  padding-left: 24px;
+
+  background: url("@{deco-url}@{imgName}.svg");
+  background-size: @imgSize;
+  background-position: @direction;
+  background-repeat: no-repeat;
+}
+
+.with-checkbox-checked(@box-size, @direction, @check-color) {
+  background: url("@{checkbox-url}checkbox-checked-@{check-color}.svg");
+  background-size: @box-size;
+  background-repeat: no-repeat;
+  background-position: @direction; 
+}
+.with-checkbox-unchecked(@box-size, @direction, @check-color) {
+	background: url("@{checkbox-url}checkbox-unchecked-@{check-color}.svg");
+  background-size: @box-size;  
+  background-repeat: no-repeat;
+  background-position: @direction;
+}
+.with-new-checkbox-checked(@box-size, @direction) {
+  background: url("@{checkbox-url}check-select.svg");
+  background-size: @box-size;
+  background-repeat: no-repeat;
+  background-position: @direction; 
+}
+.with-new-checkbox-unchecked(@box-size, @direction) {
+	background: url("@{checkbox-url}check-unselect.svg");
+  background-size: @box-size;  
+  background-repeat: no-repeat;
+  background-position: @direction;
+}
+
+.with-radio-checked(@box-size, @direction) {
+  background: url("@{checkbox-url}radio-checked.svg");
+  background-size: @box-size;
+  background-repeat: no-repeat;
+  background-position: @direction;
+}
+.with-radio-normal(@box-size, @direction) {
+  background: url("@{checkbox-url}radio-normal.svg");
+  background-size: @box-size;
+  background-repeat: no-repeat;
+  background-position: @direction;
+}
+.with-radio-disabled(@box-size, @direction) {
+  background: url("@{checkbox-url}radio-disabled.svg");
+  background-size: @box-size;
+  background-repeat: no-repeat;
+  background-position: @direction;
+}

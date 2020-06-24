@@ -1,0 +1,365 @@
+@charset "UTF-8";
+@import "variable.less";
+@import "colorset.less";
+@import "text-guide.less";
+
+/*    Button Styles    */
+
+// index
+// naked-button
+//.normal-light-button (font-size-lg, font-size-md, font-size-sm, font-size-xs)
+// normal-dark-button (font-size-lg, font-size-md, font-size-sm, font-size-xs)
+// solid-button (font-size-lg, font-size-md, font-size-sm, font-size-xs)
+// img-button (img-url, img-size, padding)
+// button-with-left/right-chevron (chevron-size, padding-right)
+.naked-button() {
+	border: 0;
+	background: transparent;
+}
+
+//
+.normal-light-button(@font-size-lg, @font-size-md, @font-size-sm, @font-size-xs) {
+	transition: 0.25s;
+	text-decoration: inherit;
+	text-align: center;
+	cursor:pointer;
+	font-size: @font-size-lg;
+	-ms-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: @border-normal-gray;
+	background-color: #ffffff;
+	color: @color-gray;
+	.condensed-text();
+	@media @medium {
+		font-size: @font-size-md;
+	}
+	@media @small {
+		font-size: @font-size-sm;
+	}
+	@media @extra-small {
+		font-size: @font-size-xs;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: #e1e1e1;
+		color: @color-gray;
+	}
+	&:disabled {
+		background-color: #fbd0e4;
+	}
+}
+
+//
+.normal-dark-button(@font-size-lg, @font-size-md, @font-size-sm, @font-size-xs) {
+	transition: 0.25s;
+	text-decoration: inherit;
+	text-align: center;
+	cursor:pointer;
+	font-size: @font-size-lg;
+	-ms-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: @border-normal-gray;
+	background-color: @color-gray-lighten-most;
+	color: @color-gray;
+	.condensed-text();
+
+	@media @medium {
+		font-size: @font-size-md;
+	}
+	@media @small {
+		font-size: @font-size-sm;
+	}
+	@media @extra-small {
+		font-size: @font-size-xs;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: #e1e1e1;
+		color: @color-gray;
+	}
+	&:disabled {
+		background-color: #fbd0e4;
+	}
+}
+
+//
+.solid-button(@font-size-lg, @font-size-md, @font-size-sm, @font-size-xs) {
+	//버튼마다 공통으로 필요한 부분 정리
+	-ms-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: center;
+	padding: 10px 0;
+	cursor: pointer;
+	text-decoration: none;
+	border: none;
+	//기존 메인컬러 버튼 css
+	.condensed-text();
+	font-size: @font-size-lg;
+	@media @medium {
+		font-size: @font-size-md;
+	}
+	@media @small {
+		font-size: @font-size-sm;
+	}
+	@media @extra-small {
+		font-size: @font-size-xs;
+	}
+	background-color: @color-main-bg;
+	color: #ffffff;
+	&:hover,
+	&:focus {
+		background-color: #ff1a84;
+		color: #ffffff;
+	}
+	&.disabled {
+		background-color: #fbd0e4;
+        cursor:default;
+	}
+}
+
+//
+.img-button(@img-url, @img-size, @padding) {
+	border: 0;
+	background: @img-url;
+	padding: @padding;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: @img-size;
+}
+
+.line-main-button(@font-size-lg, @font-size-md, @font-size-sm, @font-size-xs) {
+	color: @color-main-font;
+	text-decoration: none;
+	-ms-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: #ffffff;
+	border: @border-normal-main;
+	border-radius: 4px;
+	text-align: center;
+	.condensed-text();
+	font-size: @font-size-lg;
+	@media @medium {
+		font-size: @font-size-md;
+	}
+	@media @small {
+		font-size: @font-size-sm;
+	}
+	@media @extra-small {
+		font-size: @font-size-xs;
+	}
+}
+
+.line-button(@font-size-lg, @font-size-md, @font-size-sm, @font-size-xs) {
+	color: @color-gray;
+	background-color: #ffffff;
+	border: @border-normal-gray;
+	border-radius: 4px;
+	text-decoration: none;
+	-ms-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: center;
+	.condensed-text();
+	cursor:pointer;
+	font-size: @font-size-lg;
+	@media @medium {
+		font-size: @font-size-md;
+	}
+	@media @small {
+		font-size: @font-size-sm;
+	}
+	@media @extra-small {
+		font-size: @font-size-xs;
+	}
+}
+
+
+.post-write-btn {
+	display: inline-block;
+	color: @color-gray;
+	text-align: center;
+	background-color: #f6f6f6;
+	border: @border-normal-gray-darken-less;
+	border-radius: 3px;
+	-ms-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing:border-box;
+	padding: 8px 20px;
+	cursor: pointer;
+	text-decoration: none;
+	.condensed-text();
+}
+.post-write-btn-white {
+	display: inline-block;
+	color: @color-gray;
+    font-size:14px;
+	text-align: center;
+	background-color: #fff;
+	border: 1px solid @color-sub-back-most;
+	border-radius: 4px;
+	-ms-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing:border-box;
+	padding: 9px 16px;
+	cursor: pointer;
+	text-decoration: none;
+	.condensed-text();
+}
+/* 펀딩등록 버튼 */
+
+.normal-line-button(@font-size-lg, @font-size-md, @font-size-sm, @font-size-xs){
+    color: @color-main-font;
+    background-color:#fff;
+    border:1px solid @color-main-bg;
+    text-decoration: none;
+    text-align:center;
+    cursor:pointer;
+	-ms-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	.condensed-text();
+    padding:0 23px;
+    font-size: @font-size-lg;
+    &:hover,
+    &:focus{
+        background-color:#ffe5f2;
+    }
+	@media @medium {
+		font-size: @font-size-md;
+	}
+	@media @small {
+		font-size: @font-size-sm;
+	}
+	@media @extra-small {
+		font-size: @font-size-xs;
+	}
+}
+.normal-color-button(@font-size-lg, @font-size-md, @font-size-sm, @font-size-xs){
+    color:#fff;
+    background-color: @color-main-bg;
+    border:none;
+    text-decoration: none;
+    text-align:center;
+    cursor:pointer;
+	-ms-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	.condensed-text();
+    padding:0 23px;
+    font-size: @font-size-lg;
+    &:hover,
+    &:focus{
+        background-color:#cc0066;
+    }
+	@media @medium {
+		font-size: @font-size-md;
+	}
+	@media @small {
+		font-size: @font-size-sm;
+	}
+	@media @extra-small {
+		font-size: @font-size-xs;
+	}
+}
+.round-line-button(@font-size-lg, @font-size-md, @font-size-sm, @font-size-xs){
+    color:@color-gray;
+    background-color:#fff;
+    border:1px solid @color-gray-sub;
+    border-radius:4px;
+    text-decoration: none;
+    text-align:center;
+    cursor:pointer;
+    -webkit-appearance: none;
+	-ms-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	.condensed-text();
+    padding:0 23px;
+    font-size: @font-size-lg;
+    &:hover,
+    &:focus{
+        background-color:#e6e6e6;
+    }
+	@media @medium {
+		font-size: @font-size-md;
+	}
+	@media @small {
+		font-size: @font-size-sm;
+	}
+	@media @extra-small {
+		font-size: @font-size-xs;
+	}
+}
+.round-color-button(@font-size-lg, @font-size-md, @font-size-sm, @font-size-xs){
+    color:#fff;
+    background-color: @color-main-bg;
+    border-radius:4px;
+    text-decoration: none;
+    text-align:center;
+    cursor:pointer;
+	-ms-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	.condensed-text();
+    padding:0 23px;
+    font-size: @font-size-lg;
+    &:hover,
+    &:focus{
+        background-color:#cc0066;
+    }
+	@media @medium {
+		font-size: @font-size-md;
+	}
+	@media @small {
+		font-size: @font-size-sm;
+	}
+	@media @extra-small {
+		font-size: @font-size-xs;
+	}
+}
+.ellipse-button(@font-size-lg, @font-size-md, @font-size-sm, @font-size-xs){
+    color:#fff;
+    background-color: @color-main-bg;
+    border-radius:20px;
+    text-decoration: none;
+    text-align:center;
+    cursor:pointer;
+	-ms-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	.condensed-text();
+    padding:0 23px;
+    font-size: @font-size-lg;
+    &:hover,
+    &:focus{
+        background-color:#cc0066;
+    }
+    @media @medium {
+		font-size: @font-size-md;
+	}
+	@media @small {
+		font-size: @font-size-sm;
+	}
+	@media @extra-small {
+		font-size: @font-size-xs;
+	}
+}
